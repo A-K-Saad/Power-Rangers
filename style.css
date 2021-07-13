@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#00000052, #0000006b), url(images/bg-1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.wrapper{
+    width: 100%;
+    background: url(images/bg-2.png);
+    background-repeat: repeat;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+/*=========================
+    Header
+=========================*/
+header{
+    margin-bottom: 20px;
+}
+.navbar{
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+ul.right-menu{
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+ul li a{
+    text-decoration: none;
+    color: #e1b87a;
+    font-size: 20px;
+    font-style: italic;
+}
+ul li a img{
+    width: 20vw;
+}
+.intro{
+    position: relative;
+}
+.intro img{
+    width: 90vw;
+    margin: 0 auto;
+}
+.main-name{
+    width: 40%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 1vw;
+}
+.main-name img{
+    width: 35vw;
+}
+.main-title{
+    text-decoration: none;
+    color: #e1b87a;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+/*=========================
+    Forces
+=========================*/
+.force-wrapper{
+    background: #212121;
+    padding: 50px 0;
+    margin: 20px 0;
+}
+.forces{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.single-force{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin: 5px;
+    box-shadow: 0 0 8px salmon;
+    background: #0000008a;
+}
+.single-force:before{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    left: 0;
+    opacity: .5;
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    -webkit-transform: translateX(-150px) skewX(-15deg);
+    transform: translateX(-150px) skewX(-15deg);
+}
+.single-force:hover:after{
+    -webkit-transform: translateX(600px) skewX(-15deg);
+    transform: translateX(600px) skewX(-15deg);
+    opacity: 1;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.single-force:after {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    left: 30px;
+    opacity: 0;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    -webkit-transform: translateX(-150px) skewX(-15deg);
+    transform: translateX(-150px) skewX(-15px);
+}
+.single-force:after, .single-force:before{
+    content: '';
+    display: block;
+    height: 120%;
+    top: 0;
+}
+.single-force img{
+    width: 100%;
+    background-color: black;
+    outline: 1px solid grey;
+    height: 225px;
+}
+.single-force h2{
+    color: #e1b87a;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.single-force p{
+    color: #d5cdcd;
+    text-align: justify;
+}
+/*=========================
+    Videos and Apps
+=========================*/
+.video-apps{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.video-apps img{
+    width: 100%;
+    margin: 0 auto;
+}
+.single-discover{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.single-discover h1{
+    text-align: center;
+    color: #e1b87a;
+    font-size: 35px;
+}
+.discover-btn{
+    text-decoration: none;
+    background: linear-gradient(-147deg, #0089ff, #1b00ff);
+    padding: 11px 26px;
+    color: antiquewhite;
+    border-radius: 2px;
+    margin: 10px;
+}
+/*=========================
+    Media Query
+=========================*/
+@media only screen and (max-width: 668px) {
+    ul{
+        margin: 0 auto;
+    }
+    ul.right-menu {
+        list-style: none;
+        display: flex;
+        gap: 19px;
+        align-content: center;
+    }
+    ul li a img{
+        width: 35vw;
+    }
+    ul li a {
+        text-decoration: none;
+        color: #e1b87a;
+        font-size: 16px;
+        font-style: italic;
+    }
+    .intro {
+        position: relative;
+        overflow: hidden;
+        margin: 20px auto;
+        padding: 12px 0;
+    }
+    .intro>img {
+        width: 90vw;
+        margin: 0 auto;
+        transform: scale(1.5);
+    }
+    .main-name img {
+        width: 35vw;
+        transform: scale(1.5);
+    }
+    .forces{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .video-apps{
+        flex-wrap: wrap;
+    }
+}
