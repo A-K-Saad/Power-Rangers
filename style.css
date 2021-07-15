@@ -23,6 +23,8 @@ body{
 .container{
     width: 85%;
     margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
 }
 /*=========================
     Header
@@ -63,7 +65,7 @@ ul li a img{
     position: relative;
 }
 .intro img{
-    width: 90vw;
+    width: 75%;
     margin: 0 auto;
 }
 .main-name{
@@ -75,7 +77,9 @@ ul li a img{
     bottom: 1vw;
 }
 .main-name img{
-    width: 35vw;
+    width: 95%;
+    position: relative;
+    top: 30px;
 }
 .main-title{
     text-decoration: none;
@@ -212,15 +216,20 @@ footer{
     padding-top: 10px;
     position: relative;
 }
+.footer-left form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3px;
+    width: 97%;
+}
 .footer-left input{
     background: #383838;
     padding: 16px;
     border: none;
     outline: 1px solid gray;
-    width: 80%;
-}
-.footer-left p{
-    margin: 20px 0;
+    width: 90%;
+    position: relative;
 }
 .fa-paper-plane{
     font-weight: 900;
@@ -228,8 +237,10 @@ footer{
     padding: 7px 12px;
     font-size: 27px;
     position: absolute;
-    top: 13px;
-    right: 6.5%;
+    right: 16px;
+}
+.footer-left p{
+    margin: 20px 0;
 }
 .footer-middle img{
     width: 50%;
@@ -294,17 +305,14 @@ footer{
     }
     .intro {
         position: relative;
-        overflow: hidden;
         margin: 20px auto;
         padding: 12px 0;
     }
     .intro>img {
-        width: 90vw;
         margin: 0 auto;
         transform: scale(1.5);
     }
     .main-name img {
-        width: 35vw;
         transform: scale(1.5);
     }
     .forces{
@@ -321,6 +329,6 @@ footer{
         grid-template-columns: repeat(1, 1fr);
     }
     .fa-paper-plane{
-        right: 5%;
+        right: 11px;
     }
 }
